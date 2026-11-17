@@ -49,6 +49,7 @@ async def test_awake_scale(hass: HomeAssistant, scale: AsyncMock, catalog: Async
     assert firmware.attributes["installed_version"] == "3.1.15" and firmware.attributes["latest_version"] == "3.1.16"
     assert firmware.attributes["release_url"] == LATEST.url
     assert not firmware.attributes["supported_features"]  # reports only, cannot install
+    assert "entity_picture" not in firmware.attributes  # no brand icon exists, so no broken image
 
 
 async def test_up_to_date_firmware(hass: HomeAssistant, scale: AsyncMock, catalog: AsyncMock) -> None:

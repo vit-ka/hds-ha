@@ -26,6 +26,11 @@ class HdsFirmwareUpdate(HdsEntity, UpdateEntity):
         super().__init__(coordinator, "firmware")
 
     @property
+    def entity_picture(self) -> None:
+        """No picture: the default is this integration's brand icon, and it has none to serve."""
+        return None
+
+    @property
     def installed_version(self) -> str | None:
         status = self.coordinator.data.status
         return status.firmware if status else None
