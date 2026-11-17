@@ -1,0 +1,26 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Half Decent Scale",
+        "description": "Turn the scale on with WiFi enabled, then enter its address: its name on the network (hds.local unless you renamed it) or its IP address.",
+        "data": {
+          "host": "Address"
+        }
+      }
+    },
+    "error": {
+      "cannot_connect": "The scale did not answer. Check that it is on, that WiFi is enabled on it, and the address."
+    },
+    "abort": {
+      "already_configured": "This scale is already set up."
+    }
+  },
+  "entity": {
+    "sensor": {
+      "battery_voltage": {
+        "name": "Battery voltage"
+      }
+    }
+  }
+}
